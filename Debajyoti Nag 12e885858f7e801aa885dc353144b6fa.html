@@ -1,0 +1,715 @@
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=utf-8"/><title>Debajyoti Nag</title><style>
+/* cspell:disable-file */
+/* webkit printing magic: print all background colors */
+html {
+	-webkit-print-color-adjust: exact;
+}
+* {
+	box-sizing: border-box;
+	-webkit-print-color-adjust: exact;
+}
+
+html,
+body {
+	margin: 0;
+	padding: 0;
+}
+@media only screen {
+	body {
+		margin: 2em auto;
+		max-width: 900px;
+		color: rgb(55, 53, 47);
+	}
+}
+
+body {
+	line-height: 1.5;
+	white-space: pre-wrap;
+}
+
+a,
+a.visited {
+	color: inherit;
+	text-decoration: underline;
+}
+
+.pdf-relative-link-path {
+	font-size: 80%;
+	color: #444;
+}
+
+h1,
+h2,
+h3 {
+	letter-spacing: -0.01em;
+	line-height: 1.2;
+	font-weight: 600;
+	margin-bottom: 0;
+}
+
+.page-title {
+	font-size: 2.5rem;
+	font-weight: 700;
+	margin-top: 0;
+	margin-bottom: 0.75em;
+}
+
+h1 {
+	font-size: 1.875rem;
+	margin-top: 1.875rem;
+}
+
+h2 {
+	font-size: 1.5rem;
+	margin-top: 1.5rem;
+}
+
+h3 {
+	font-size: 1.25rem;
+	margin-top: 1.25rem;
+}
+
+.source {
+	border: 1px solid #ddd;
+	border-radius: 3px;
+	padding: 1.5em;
+	word-break: break-all;
+}
+
+.callout {
+	border-radius: 3px;
+	padding: 1rem;
+}
+
+figure {
+	margin: 1.25em 0;
+	page-break-inside: avoid;
+}
+
+figcaption {
+	opacity: 0.5;
+	font-size: 85%;
+	margin-top: 0.5em;
+}
+
+mark {
+	background-color: transparent;
+}
+
+.indented {
+	padding-left: 1.5em;
+}
+
+hr {
+	background: transparent;
+	display: block;
+	width: 100%;
+	height: 1px;
+	visibility: visible;
+	border: none;
+	border-bottom: 1px solid rgba(55, 53, 47, 0.09);
+}
+
+img {
+	max-width: 100%;
+}
+
+@media only print {
+	img {
+		max-height: 100vh;
+		object-fit: contain;
+	}
+}
+
+@page {
+	margin: 1in;
+}
+
+.collection-content {
+	font-size: 0.875rem;
+}
+
+.column-list {
+	display: flex;
+	justify-content: space-between;
+}
+
+.column {
+	padding: 0 1em;
+}
+
+.column:first-child {
+	padding-left: 0;
+}
+
+.column:last-child {
+	padding-right: 0;
+}
+
+.table_of_contents-item {
+	display: block;
+	font-size: 0.875rem;
+	line-height: 1.3;
+	padding: 0.125rem;
+}
+
+.table_of_contents-indent-1 {
+	margin-left: 1.5rem;
+}
+
+.table_of_contents-indent-2 {
+	margin-left: 3rem;
+}
+
+.table_of_contents-indent-3 {
+	margin-left: 4.5rem;
+}
+
+.table_of_contents-link {
+	text-decoration: none;
+	opacity: 0.7;
+	border-bottom: 1px solid rgba(55, 53, 47, 0.18);
+}
+
+table,
+th,
+td {
+	border: 1px solid rgba(55, 53, 47, 0.09);
+	border-collapse: collapse;
+}
+
+table {
+	border-left: none;
+	border-right: none;
+}
+
+th,
+td {
+	font-weight: normal;
+	padding: 0.25em 0.5em;
+	line-height: 1.5;
+	min-height: 1.5em;
+	text-align: left;
+}
+
+th {
+	color: rgba(55, 53, 47, 0.6);
+}
+
+ol,
+ul {
+	margin: 0;
+	margin-block-start: 0.6em;
+	margin-block-end: 0.6em;
+}
+
+li > ol:first-child,
+li > ul:first-child {
+	margin-block-start: 0.6em;
+}
+
+ul > li {
+	list-style: disc;
+}
+
+ul.to-do-list {
+	padding-inline-start: 0;
+}
+
+ul.to-do-list > li {
+	list-style: none;
+}
+
+.to-do-children-checked {
+	text-decoration: line-through;
+	opacity: 0.375;
+}
+
+ul.toggle > li {
+	list-style: none;
+}
+
+ul {
+	padding-inline-start: 1.7em;
+}
+
+ul > li {
+	padding-left: 0.1em;
+}
+
+ol {
+	padding-inline-start: 1.6em;
+}
+
+ol > li {
+	padding-left: 0.2em;
+}
+
+.mono ol {
+	padding-inline-start: 2em;
+}
+
+.mono ol > li {
+	text-indent: -0.4em;
+}
+
+.toggle {
+	padding-inline-start: 0em;
+	list-style-type: none;
+}
+
+/* Indent toggle children */
+.toggle > li > details {
+	padding-left: 1.7em;
+}
+
+.toggle > li > details > summary {
+	margin-left: -1.1em;
+}
+
+.selected-value {
+	display: inline-block;
+	padding: 0 0.5em;
+	background: rgba(206, 205, 202, 0.5);
+	border-radius: 3px;
+	margin-right: 0.5em;
+	margin-top: 0.3em;
+	margin-bottom: 0.3em;
+	white-space: nowrap;
+}
+
+.collection-title {
+	display: inline-block;
+	margin-right: 1em;
+}
+
+.page-description {
+    margin-bottom: 2em;
+}
+
+.simple-table {
+	margin-top: 1em;
+	font-size: 0.875rem;
+	empty-cells: show;
+}
+.simple-table td {
+	height: 29px;
+	min-width: 120px;
+}
+
+.simple-table th {
+	height: 29px;
+	min-width: 120px;
+}
+
+.simple-table-header-color {
+	background: rgb(247, 246, 243);
+	color: black;
+}
+.simple-table-header {
+	font-weight: 500;
+}
+
+time {
+	opacity: 0.5;
+}
+
+.icon {
+	display: inline-block;
+	max-width: 1.2em;
+	max-height: 1.2em;
+	text-decoration: none;
+	vertical-align: text-bottom;
+	margin-right: 0.5em;
+}
+
+img.icon {
+	border-radius: 3px;
+}
+
+.user-icon {
+	width: 1.5em;
+	height: 1.5em;
+	border-radius: 100%;
+	margin-right: 0.5rem;
+}
+
+.user-icon-inner {
+	font-size: 0.8em;
+}
+
+.text-icon {
+	border: 1px solid #000;
+	text-align: center;
+}
+
+.page-cover-image {
+	display: block;
+	object-fit: cover;
+	width: 100%;
+	max-height: 30vh;
+}
+
+.page-header-icon {
+	font-size: 3rem;
+	margin-bottom: 1rem;
+}
+
+.page-header-icon-with-cover {
+	margin-top: -0.72em;
+	margin-left: 0.07em;
+}
+
+.page-header-icon img {
+	border-radius: 3px;
+}
+
+.link-to-page {
+	margin: 1em 0;
+	padding: 0;
+	border: none;
+	font-weight: 500;
+}
+
+p > .user {
+	opacity: 0.5;
+}
+
+td > .user,
+td > time {
+	white-space: nowrap;
+}
+
+input[type="checkbox"] {
+	transform: scale(1.5);
+	margin-right: 0.6em;
+	vertical-align: middle;
+}
+
+p {
+	margin-top: 0.5em;
+	margin-bottom: 0.5em;
+}
+
+.image {
+	border: none;
+	margin: 1.5em 0;
+	padding: 0;
+	border-radius: 0;
+	text-align: center;
+}
+
+.code,
+code {
+	background: rgba(135, 131, 120, 0.15);
+	border-radius: 3px;
+	padding: 0.2em 0.4em;
+	border-radius: 3px;
+	font-size: 85%;
+	tab-size: 2;
+}
+
+code {
+	color: #eb5757;
+}
+
+.code {
+	padding: 1.5em 1em;
+}
+
+.code-wrap {
+	white-space: pre-wrap;
+	word-break: break-all;
+}
+
+.code > code {
+	background: none;
+	padding: 0;
+	font-size: 100%;
+	color: inherit;
+}
+
+blockquote {
+	font-size: 1.25em;
+	margin: 1em 0;
+	padding-left: 1em;
+	border-left: 3px solid rgb(55, 53, 47);
+}
+
+.bookmark {
+	text-decoration: none;
+	max-height: 8em;
+	padding: 0;
+	display: flex;
+	width: 100%;
+	align-items: stretch;
+}
+
+.bookmark-title {
+	font-size: 0.85em;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	height: 1.75em;
+	white-space: nowrap;
+}
+
+.bookmark-text {
+	display: flex;
+	flex-direction: column;
+}
+
+.bookmark-info {
+	flex: 4 1 180px;
+	padding: 12px 14px 14px;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+}
+
+.bookmark-image {
+	width: 33%;
+	flex: 1 1 180px;
+	display: block;
+	position: relative;
+	object-fit: cover;
+	border-radius: 1px;
+}
+
+.bookmark-description {
+	color: rgba(55, 53, 47, 0.6);
+	font-size: 0.75em;
+	overflow: hidden;
+	max-height: 4.5em;
+	word-break: break-word;
+}
+
+.bookmark-href {
+	font-size: 0.75em;
+	margin-top: 0.25em;
+}
+
+.sans { font-family: ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol"; }
+.code { font-family: "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace; }
+.serif { font-family: Lyon-Text, Georgia, ui-serif, serif; }
+.mono { font-family: iawriter-mono, Nitti, Menlo, Courier, monospace; }
+.pdf .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK JP'; }
+.pdf:lang(zh-CN) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK SC'; }
+.pdf:lang(zh-TW) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK TC'; }
+.pdf:lang(ko-KR) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK KR'; }
+.pdf .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK JP'; }
+.pdf:lang(zh-CN) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK SC'; }
+.pdf:lang(zh-TW) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK TC'; }
+.pdf:lang(ko-KR) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK KR'; }
+.pdf .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK JP'; }
+.pdf:lang(zh-CN) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK SC'; }
+.pdf:lang(zh-TW) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK TC'; }
+.pdf:lang(ko-KR) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK KR'; }
+.pdf .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK JP'; }
+.pdf:lang(zh-CN) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK SC'; }
+.pdf:lang(zh-TW) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK TC'; }
+.pdf:lang(ko-KR) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK KR'; }
+.highlight-default {
+	color: rgba(55, 53, 47, 1);
+}
+.highlight-gray {
+	color: rgba(120, 119, 116, 1);
+	fill: rgba(120, 119, 116, 1);
+}
+.highlight-brown {
+	color: rgba(159, 107, 83, 1);
+	fill: rgba(159, 107, 83, 1);
+}
+.highlight-orange {
+	color: rgba(217, 115, 13, 1);
+	fill: rgba(217, 115, 13, 1);
+}
+.highlight-yellow {
+	color: rgba(203, 145, 47, 1);
+	fill: rgba(203, 145, 47, 1);
+}
+.highlight-teal {
+	color: rgba(68, 131, 97, 1);
+	fill: rgba(68, 131, 97, 1);
+}
+.highlight-blue {
+	color: rgba(51, 126, 169, 1);
+	fill: rgba(51, 126, 169, 1);
+}
+.highlight-purple {
+	color: rgba(144, 101, 176, 1);
+	fill: rgba(144, 101, 176, 1);
+}
+.highlight-pink {
+	color: rgba(193, 76, 138, 1);
+	fill: rgba(193, 76, 138, 1);
+}
+.highlight-red {
+	color: rgba(212, 76, 71, 1);
+	fill: rgba(212, 76, 71, 1);
+}
+.highlight-default_background {
+	color: rgba(55, 53, 47, 1);
+}
+.highlight-gray_background {
+	background: rgba(241, 241, 239, 1);
+}
+.highlight-brown_background {
+	background: rgba(244, 238, 238, 1);
+}
+.highlight-orange_background {
+	background: rgba(251, 236, 221, 1);
+}
+.highlight-yellow_background {
+	background: rgba(251, 243, 219, 1);
+}
+.highlight-teal_background {
+	background: rgba(237, 243, 236, 1);
+}
+.highlight-blue_background {
+	background: rgba(231, 243, 248, 1);
+}
+.highlight-purple_background {
+	background: rgba(244, 240, 247, 0.8);
+}
+.highlight-pink_background {
+	background: rgba(249, 238, 243, 0.8);
+}
+.highlight-red_background {
+	background: rgba(253, 235, 236, 1);
+}
+.block-color-default {
+	color: inherit;
+	fill: inherit;
+}
+.block-color-gray {
+	color: rgba(120, 119, 116, 1);
+	fill: rgba(120, 119, 116, 1);
+}
+.block-color-brown {
+	color: rgba(159, 107, 83, 1);
+	fill: rgba(159, 107, 83, 1);
+}
+.block-color-orange {
+	color: rgba(217, 115, 13, 1);
+	fill: rgba(217, 115, 13, 1);
+}
+.block-color-yellow {
+	color: rgba(203, 145, 47, 1);
+	fill: rgba(203, 145, 47, 1);
+}
+.block-color-teal {
+	color: rgba(68, 131, 97, 1);
+	fill: rgba(68, 131, 97, 1);
+}
+.block-color-blue {
+	color: rgba(51, 126, 169, 1);
+	fill: rgba(51, 126, 169, 1);
+}
+.block-color-purple {
+	color: rgba(144, 101, 176, 1);
+	fill: rgba(144, 101, 176, 1);
+}
+.block-color-pink {
+	color: rgba(193, 76, 138, 1);
+	fill: rgba(193, 76, 138, 1);
+}
+.block-color-red {
+	color: rgba(212, 76, 71, 1);
+	fill: rgba(212, 76, 71, 1);
+}
+.block-color-default_background {
+	color: inherit;
+	fill: inherit;
+}
+.block-color-gray_background {
+	background: rgba(241, 241, 239, 1);
+}
+.block-color-brown_background {
+	background: rgba(244, 238, 238, 1);
+}
+.block-color-orange_background {
+	background: rgba(251, 236, 221, 1);
+}
+.block-color-yellow_background {
+	background: rgba(251, 243, 219, 1);
+}
+.block-color-teal_background {
+	background: rgba(237, 243, 236, 1);
+}
+.block-color-blue_background {
+	background: rgba(231, 243, 248, 1);
+}
+.block-color-purple_background {
+	background: rgba(244, 240, 247, 0.8);
+}
+.block-color-pink_background {
+	background: rgba(249, 238, 243, 0.8);
+}
+.block-color-red_background {
+	background: rgba(253, 235, 236, 1);
+}
+.select-value-color-uiBlue { background-color: rgba(35, 131, 226, .07); }
+.select-value-color-pink { background-color: rgba(245, 224, 233, 1); }
+.select-value-color-purple { background-color: rgba(232, 222, 238, 1); }
+.select-value-color-green { background-color: rgba(219, 237, 219, 1); }
+.select-value-color-gray { background-color: rgba(227, 226, 224, 1); }
+.select-value-color-transparentGray { background-color: rgba(227, 226, 224, 0); }
+.select-value-color-translucentGray { background-color: rgba(0, 0, 0, 0.06); }
+.select-value-color-orange { background-color: rgba(250, 222, 201, 1); }
+.select-value-color-brown { background-color: rgba(238, 224, 218, 1); }
+.select-value-color-red { background-color: rgba(255, 226, 221, 1); }
+.select-value-color-yellow { background-color: rgba(253, 236, 200, 1); }
+.select-value-color-blue { background-color: rgba(211, 229, 239, 1); }
+.select-value-color-pageGlass { background-color: undefined; }
+.select-value-color-washGlass { background-color: undefined; }
+
+.checkbox {
+	display: inline-flex;
+	vertical-align: text-bottom;
+	width: 16;
+	height: 16;
+	background-size: 16px;
+	margin-left: 2px;
+	margin-right: 5px;
+}
+
+.checkbox-on {
+	background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20width%3D%2216%22%20height%3D%2216%22%20fill%3D%22%2358A9D7%22%2F%3E%0A%3Cpath%20d%3D%22M6.71429%2012.2852L14%204.9995L12.7143%203.71436L6.71429%209.71378L3.28571%206.2831L2%207.57092L6.71429%2012.2852Z%22%20fill%3D%22white%22%2F%3E%0A%3C%2Fsvg%3E");
+}
+
+.checkbox-off {
+	background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20x%3D%220.75%22%20y%3D%220.75%22%20width%3D%2214.5%22%20height%3D%2214.5%22%20fill%3D%22white%22%20stroke%3D%22%2336352F%22%20stroke-width%3D%221.5%22%2F%3E%0A%3C%2Fsvg%3E");
+}
+	
+</style></head><body><article id="12e88585-8f7e-801a-a885-dc353144b6fa" class="page sans"><header><h1 class="page-title">Debajyoti Nag</h1><p class="page-description"></p></header><div class="page-body"><div id="12e88585-8f7e-81d1-8abe-ed0290326f4f" class="column-list"><div id="12e88585-8f7e-81f9-a109-c5d545bee1ad" style="width:25%" class="column"><figure id="12e88585-8f7e-817b-8297-da5c111eefda" class="image"><a href="me_2024.jpg"><img style="width:320.2875061035156px" src="me_2024.jpg"/></a></figure><h2 id="12e88585-8f7e-81f1-a0b1-cf8fce040fa2" class="block-color-default">Contact</h2><hr id="12e88585-8f7e-8191-a3d5-c93233c980c2"/><p id="12e88585-8f7e-815a-b39c-ff35a690ce90" class="">📱 <strong>+91 7042440515 </strong></p><p id="13388585-8f7e-8021-b841-ea70b3a32587" class="">📱<strong> +62 81910071990</strong></p><p id="12e88585-8f7e-816a-8d83-f6226ba5dd75" class="">✉️ : <strong>writetodebajyotinag@gmail.com</strong></p><p id="12e88585-8f7e-81f3-b3aa-d15e1b64dfc4" class="">📍 <strong>Jakarta, Indonesia</strong></p><h2 id="12e88585-8f7e-81da-9c5b-f7cd29c49b52" class="block-color-default">Interests</h2><hr id="12e88585-8f7e-8145-b8bd-cca22a0060f0"/><p id="12e88585-8f7e-81b4-b9f2-df47fb429a4a" class="block-color-default">🤿<strong> Swimming</strong></p><p id="12e88585-8f7e-81b9-a62d-f72da5b664d1" class="">🎯<strong> Board Games</strong></p><p id="12e88585-8f7e-8117-98f6-fcc75445e113" class="">📚<strong> Reading</strong></p><h2 id="12e88585-8f7e-8101-92d7-d2eafbd2a90d" class="block-color-default">Languages</h2><hr id="12e88585-8f7e-8184-ac15-dcc62b7a3835"/><p id="12e88585-8f7e-8162-bbad-c78463d05dcb" class="">🇬🇧 <strong>English </strong></p><p id="12e88585-8f7e-8142-a77d-d26e434fc37f" class="">🇮🇳 <strong>Hindi </strong></p><p id="12e88585-8f7e-805b-8b39-d2e40296e5a5" class="">🇮🇳 <strong>Bengali </strong></p><p id="12e88585-8f7e-800f-a594-c41bbecf86e8" class="">🇸🇪<strong> Swedish - </strong><mark class="highlight-gray"><mark class="highlight-default_background"><strong>Beginner</strong></mark></mark></p><p id="12e88585-8f7e-8154-9d51-dca79fc07ad7" class="">🇮🇩 <strong>Bahasa - </strong><mark class="highlight-gray"><strong>Beginner</strong></mark></p><p id="13188585-8f7e-80c9-a645-db35385ec9c2" class="">
+</p></div><div id="12e88585-8f7e-81df-ae3e-e7d540bc6440" style="width:75%" class="column"><figure class="block-color-default callout" style="white-space:pre-wrap;display:flex" id="12e88585-8f7e-817e-ae64-c783c27961fe"><div style="width:100%">Leveraging over ten years of experience as a first-principles thinker in complex and regulated B2B and B2C platforms, I have developed digital, data-driven tools and processes to improve customer experiences. As an enthusiastic team player and leader, I am committed to delivering results that truly reflect the voice of the customer.</div></figure><h1 id="12e88585-8f7e-8190-a2a3-c6a6e3fd15ba" class="">Work History</h1><hr id="12e88585-8f7e-81de-9005-d3b511f80cc3"/><div id="12e88585-8f7e-81eb-9de7-ea55cea76a3b" class="column-list"><div id="12e88585-8f7e-813f-a97e-ddbdacf7f9ec" style="width:12.5%" class="column"><figure id="12e88585-8f7e-81e7-83a0-cc2e26a02535" class="image"><a href="qoala.png"><img style="width:106.9375px" src="qoala.png"/></a></figure><p id="13188585-8f7e-8073-8399-e5f62702d3fc" class="">
+</p></div><div id="12e88585-8f7e-81ab-81da-dc3e58eb8e4e" style="width:87.5%" class="column"><p id="12e88585-8f7e-81b6-a12a-ed5162b25ea1" class="">Head of Product Management, Agency Business - <a href="https://qoala.com/qoala-agency-business">Qoala</a></p><p id="13188585-8f7e-801e-800e-f837fb107e35" class=""><em><mark class="highlight-gray">May 2023 - Present</mark></em></p><ul id="13188585-8f7e-80a7-9865-c1505fcae81d" class="bulleted-list"><li style="list-style-type:disc">Heading product management for agency business across the SEA region and leading a team of ~15 product managers and designers.</li></ul><ul id="13388585-8f7e-8077-8bb7-fdbe494c7551" class="bulleted-list"><li style="list-style-type:disc">Led product strategy for a portfolio of B2B and B2C platforms, adapting offerings across diverse markets to meet regional needs in Indonesia and Thailand.</li></ul><ul id="13388585-8f7e-8040-8565-f78571001854" class="bulleted-list"><li style="list-style-type:disc">Increased lead volume by 2.3x within 60 days through strategic, AI-enhanced top-of-funnel initiatives, focusing on business scalability without additional operational costs.</li></ul><ul id="13388585-8f7e-8043-a64d-d809006815a9" class="bulleted-list"><li style="list-style-type:disc">Implemented cost-saving measures that converted operational expenses into a new revenue stream, generating an additional $60,000 in the first year.</li></ul><ul id="13188585-8f7e-80a5-8c65-f12cb8e3ec87" class="bulleted-list"><li style="list-style-type:disc">Oversaw vision and development of group SAAS offering – Falcon, deployed with multiple partners<br/>across Indonesia and Thailand, leading to an increased rate of revenue from existing business and<br/>enabling new partnerships.<br/></li></ul><ul id="13388585-8f7e-8043-8a65-d86f0fa8fafd" class="bulleted-list"><li style="list-style-type:disc">Led product decisions combining customer feedback with data insights and maintained NPS at 80+</li></ul><p id="13188585-8f7e-80fa-8d3e-c6a127945e39" class="">
+</p></div></div><div id="12e88585-8f7e-813b-9247-ee8613bb8e8e" class="column-list"><div id="12e88585-8f7e-814e-8505-e02a40e5ef40" style="width:12.5%" class="column"><figure id="12e88585-8f7e-8103-9f9a-ed1f687710db" class="image"><a href="images.jpeg"><img style="width:106.9375px" src="images.jpeg"/></a></figure><p id="13188585-8f7e-805a-b7ea-c5636c1ec7d0" class="">
+</p><p id="13188585-8f7e-8065-85ff-c0fef646d27b" class="">
+</p><p id="13188585-8f7e-80f5-988c-ec20a1750eac" class="">
+</p><p id="13188585-8f7e-8036-8257-c3556e4dd1c8" class="">
+</p><p id="13188585-8f7e-80e2-bd0c-ee287dbb1e49" class="">
+</p><p id="13188585-8f7e-8096-98ff-fbd6face5b9b" class="">
+</p><figure id="13188585-8f7e-8080-acdb-ca42317b330e" class="image"><a href="POLICYBZR.NS.png"><img style="width:106.9375px" src="POLICYBZR.NS.png"/></a></figure><p id="13388585-8f7e-8041-bf94-cd7f20834a56" class="">
+</p></div><div id="12e88585-8f7e-81c3-9fc5-e7c811879e53" style="width:87.5%" class="column"><p id="12e88585-8f7e-819d-8302-f2a576b518b1" class=""><strong>Director of Product Management - </strong><strong><a href="https://lifepal.co.id/">Lifepal Technologies</a></strong></p><p id="12e88585-8f7e-817f-99c4-c98e233ab94d" class=""><em><mark class="highlight-gray">Oct 2021 - April 2023</mark></em></p><ul id="12e88585-8f7e-81c2-b368-dca526ff9663" class="bulleted-list"><li style="list-style-type:disc">Led product management and reporting across the group, managing a team of 7 product managers and designers</li></ul><ul id="13388585-8f7e-806c-b987-fec235d96a78" class="bulleted-list"><li style="list-style-type:disc">Drove product decisions that balanced data insights with strategic customer feedback, leading to a revenue increase of 8% without impacting customer conversion.</li></ul><ul id="13188585-8f7e-8060-b6cd-fd09a41be895" class="bulleted-list"><li style="list-style-type:disc">Led <code>Payout Rationalization</code> that helped <em><span style="border-bottom:0.05em solid">reduce Cost-per-sale by ~17% over 11 months</span></em> without any impact on sales partner churn</li></ul><ul id="13188585-8f7e-80ae-a4ab-d2b46cc1edf1" class="bulleted-list"><li style="list-style-type:disc">Built processes for recovering rejections by turning them into down-selling opportunities</li></ul><p id="13188585-8f7e-80a0-9b03-f1601aa1e8e2" class="">
+</p><p id="13188585-8f7e-803c-9862-da355a72d632" class="">
+</p><p id="13188585-8f7e-801b-88c3-fc353ce2f369" class=""><strong>Data, Product and Customer Experience - </strong><strong><a href="https://www.policybazaar.com/">Policybazaar</a></strong></p><p id="13188585-8f7e-80dd-a80a-e24072a6d022" class=""><em><mark class="highlight-gray">May 2015 - Oct 2021</mark></em></p><ul id="13188585-8f7e-80f8-a43d-d1af5717d0b0" class="bulleted-list"><li style="list-style-type:disc">Developing industry-wide partnerships for improving overall after-sale customer experience</li></ul><ul id="13188585-8f7e-80fb-a295-f49bcb9c509b" class="bulleted-list"><li style="list-style-type:disc">Led contextual and personalized training sessions for industry partners to transition onto digital claims processing platforms</li></ul><ul id="13188585-8f7e-8053-b802-ede711d24828" class="bulleted-list"><li style="list-style-type:disc">Reduced motor claims survey turnaround time from 2+ days to under 4-hours, leading development of self-video claims process for Motor Insurance market, amongst the first in Indian Insurance Industry.</li></ul><ul id="13188585-8f7e-80db-9d2c-ffd2f865255a" class="bulleted-list"><li style="list-style-type:disc">Designed the ecosystem for online processing of motor insurance claims</li></ul><ul id="13188585-8f7e-80c5-838f-e24868de452f" class="bulleted-list"><li style="list-style-type:disc">“Self-Video Cashless Claims- Making Insurance Seamless” - Best Insurance Tech of the Year, IAMAI - India Digital Awards 2019</li></ul><p id="13188585-8f7e-8018-bf4f-c3a981e9087e" class="">
+</p><p id="13188585-8f7e-8078-9dba-d6d5f7a24cc3" class="">
+</p></div></div><h1 id="12e88585-8f7e-81dd-919a-cccd67366171" class="">Education</h1><hr id="12e88585-8f7e-81b1-a60e-d3775ab8b9ef"/><div id="12e88585-8f7e-8119-8dc4-f13d45e65b60" class="column-list"><div id="12e88585-8f7e-8122-bc69-fcab0478eb1b" style="width:12.5%" class="column"><figure id="12e88585-8f7e-8165-a75f-e55d1b972967" class="image"><a href="erasmus.png"><img style="width:106.9375px" src="erasmus.png"/></a></figure><p id="13188585-8f7e-80f8-889d-cddfb1d15925" class="">
+</p><p id="13188585-8f7e-8072-96e6-f205aa2f2e7d" class="">
+</p><p id="13188585-8f7e-80e0-b6b2-f863175957d9" class="">
+</p><p id="13188585-8f7e-8035-87cb-e11e41b1a45c" class="">
+</p><p id="13188585-8f7e-8031-a5ee-db2dc9ad8200" class="">
+</p><figure id="13188585-8f7e-801c-87fe-ea5709abe8d4" class="image"><a href="mdu.png"><img style="width:106.9375px" src="mdu.png"/></a></figure><p id="13188585-8f7e-8046-8e0b-c5aee5f9acd9" class="">
+</p><p id="13188585-8f7e-80eb-a259-c627cb6647a7" class="">
+</p><p id="13188585-8f7e-80a2-b76a-e3c3e510bf91" class="">
+</p><p id="13188585-8f7e-8064-88d9-f5045054f99d" class="">
+</p><p id="13188585-8f7e-804f-bc79-dd2727bcd76a" class="">
+</p><p id="13188585-8f7e-8089-a751-e00d4b4d1847" class="">
+</p><p id="13188585-8f7e-800e-9f71-d76f128acc31" class="">
+</p><figure id="13188585-8f7e-80d7-b056-ea3abc0de5d1" class="image" style="text-align:left"><a href="mdu_rohtak.png"><img style="width:106.9375px" src="mdu_rohtak.png"/></a></figure></div><div id="12e88585-8f7e-8139-9ad2-d1f19061c70b" style="width:87.5%" class="column"><p id="12e88585-8f7e-813b-a662-dfb86d297b48" class=""><strong>Computer Science – Erasmus Mundus – Sweden</strong></p><p id="12e88585-8f7e-811e-a029-c6dfe6fca0ca" class=""><em><mark class="highlight-gray">Masters Mobility Certification,2012 - 2014</mark></em></p><ul id="13388585-8f7e-80af-9fff-f540bd8ab8ef" class="bulleted-list"><li style="list-style-type:disc">Scholarship by European Union covering tuition fee and living expenses worth ~48000 EUR</li></ul><p id="13188585-8f7e-80ce-b97e-db2ffd36e21f" class="">
+</p><p id="12e88585-8f7e-8169-aeca-fd430a9db37c" class="">
+</p><p id="13188585-8f7e-80b6-8d7e-d945827bf398" class=""><strong>Intelligent Embedded Systems – Mälardalens Högskola – Sweden</strong></p><p id="13188585-8f7e-80fb-a0e3-c18972333d59" class=""><em><mark class="highlight-gray">Master of Science, 2012 - 2014</mark></em></p><ul id="13188585-8f7e-80b2-8ec2-d90060ebb886" class="bulleted-list"><li style="list-style-type:disc">Defended a Masters Thesis on ‘<em><strong>Innovation Diffusion in scale-free networks</strong></em>’, exploring how the concept of influence works in the digitally connected era. </li></ul><ul id="13388585-8f7e-80d8-88d4-f4a799c1d56d" class="bulleted-list"><li style="list-style-type:disc">Due to a family medical emergency final thesis submission was not completed<br/><br/><br/><em><strong>Project Naiad (2013-2014)</strong></em></li></ul><ul id="13388585-8f7e-80fc-aa12-cc6825cc8930" class="bulleted-list"><li style="list-style-type:disc">Built the computer-vision system for an autonomous underwater vehicle with a group of 16<br/>international students.<br/></li></ul><p id="13188585-8f7e-803c-9299-cded51e154da" class="">
+</p><p id="13188585-8f7e-8030-ab9b-f43df2a967ed" class="">
+</p><p id="13188585-8f7e-807b-a909-d98258237868" class=""><strong>Computer Science – Echelon Institute of Technology – India</strong></p><p id="13188585-8f7e-8070-b3da-cd2555e17443" class=""><em><mark class="highlight-gray">Bachelor of Technology, 2008 - 2012</mark></em></p><ul id="13188585-8f7e-80dc-bb39-dfd574bf48e4" class="bulleted-list"><li style="list-style-type:disc">Developed a basic information retrieval system in Python.</li></ul><ul id="13388585-8f7e-803f-95f2-cc890f48fa35" class="bulleted-list"><li style="list-style-type:disc">Co-founded the design and animation club on campus</li></ul><ul id="13388585-8f7e-8048-8b43-d30d0935c713" class="bulleted-list"><li style="list-style-type:disc">Published a paper on <code>Low Cost Approach to Fabricate Large Area High Efficiency Industrial Multicrystalline Silicon Solar Cells</code> at National Conference on Renewable Energy (NaCORE), Nov 2009, Jodhpur, India</li></ul></div></div><h1 id="12e88585-8f7e-815f-b035-d5441051cd24" class="block-color-default">Skills &amp; Awards</h1><hr id="13388585-8f7e-8080-802c-f69832136d1e"/><div id="12e88585-8f7e-81c0-b789-f7364d5face8" class="collection-content"><h4 class="collection-title">Skills</h4><table class="collection-content"><thead><tr><th><span class="icon property-icon"><svg role="graphics-symbol" viewBox="0 0 16 16" style="width:14px;height:14px;display:block;fill:rgba(55, 53, 47, 0.45);flex-shrink:0" class="typesTitle"><path d="M0.637695 13.1914C1.0957 13.1914 1.32812 13 1.47852 12.5215L2.24414 10.3887H6.14746L6.90625 12.5215C7.05664 13 7.2959 13.1914 7.74707 13.1914C8.22559 13.1914 8.5332 12.9043 8.5332 12.4531C8.5332 12.2891 8.50586 12.1523 8.44434 11.9678L5.41602 3.79199C5.2041 3.21777 4.82129 2.9375 4.19922 2.9375C3.60449 2.9375 3.21484 3.21777 3.0166 3.78516L-0.0322266 12.002C-0.09375 12.1797 -0.121094 12.3232 -0.121094 12.4668C-0.121094 12.918 0.166016 13.1914 0.637695 13.1914ZM2.63379 9.12402L4.17871 4.68066H4.21973L5.76465 9.12402H2.63379ZM12.2793 13.2324C13.3115 13.2324 14.2891 12.6787 14.7129 11.8037H14.7402V12.5762C14.7471 12.9863 15.0273 13.2393 15.4238 13.2393C15.834 13.2393 16.1143 12.9795 16.1143 12.5215V8.00977C16.1143 6.49902 14.9658 5.52148 13.1543 5.52148C11.7666 5.52148 10.6592 6.08887 10.2695 6.99121C10.1943 7.15527 10.1533 7.3125 10.1533 7.46289C10.1533 7.81152 10.4062 8.04395 10.7686 8.04395C11.0215 8.04395 11.2129 7.94824 11.3496 7.73633C11.7529 6.99121 12.2861 6.65625 13.1064 6.65625C14.0977 6.65625 14.6992 7.20996 14.6992 8.1123V8.67285L12.5664 8.7959C10.7686 8.8916 9.77734 9.69824 9.77734 11.0107C9.77734 12.3369 10.8096 13.2324 12.2793 13.2324ZM12.6621 12.1387C11.8008 12.1387 11.2129 11.667 11.2129 10.9561C11.2129 10.2725 11.7598 9.82129 12.7578 9.75977L14.6992 9.62988V10.3203C14.6992 11.3457 13.7969 12.1387 12.6621 12.1387Z"></path></svg></span>Category</th><th><span class="icon property-icon"><svg role="graphics-symbol" viewBox="0 0 16 16" style="width:14px;height:14px;display:block;fill:rgba(55, 53, 47, 0.45);flex-shrink:0" class="typesText"><path d="M1.56738 3.25879H14.4258C14.7676 3.25879 15.0479 2.97852 15.0479 2.63672C15.0479 2.29492 14.7744 2.02148 14.4258 2.02148H1.56738C1.21875 2.02148 0.952148 2.29492 0.952148 2.63672C0.952148 2.97852 1.22559 3.25879 1.56738 3.25879ZM1.56738 6.84082H14.4258C14.7676 6.84082 15.0479 6.56055 15.0479 6.21875C15.0479 5.87695 14.7744 5.60352 14.4258 5.60352H1.56738C1.21875 5.60352 0.952148 5.87695 0.952148 6.21875C0.952148 6.56055 1.22559 6.84082 1.56738 6.84082ZM1.56738 10.4229H14.4258C14.7676 10.4229 15.0479 10.1426 15.0479 9.80078C15.0479 9.45898 14.7744 9.18555 14.4258 9.18555H1.56738C1.21875 9.18555 0.952148 9.45898 0.952148 9.80078C0.952148 10.1426 1.22559 10.4229 1.56738 10.4229ZM1.56738 14.0049H8.75879C9.10059 14.0049 9.38086 13.7246 9.38086 13.3828C9.38086 13.041 9.10742 12.7676 8.75879 12.7676H1.56738C1.21875 12.7676 0.952148 13.041 0.952148 13.3828C0.952148 13.7246 1.22559 14.0049 1.56738 14.0049Z"></path></svg></span>Skills</th></tr></thead><tbody><tr id="12e88585-8f7e-814a-bdef-ce5008945b5f"><td class="cell-title"><a href="https://www.notion.so/Analytics-12e885858f7e814abdefce5008945b5f?pvs=21"><span class="icon">🔢</span>Analytics</a></td><td class="cell-FqpU">R, Python, SQL</td></tr><tr id="12e88585-8f7e-8182-9c08-cb87cf40dde1"><td class="cell-title"><a href="https://www.notion.so/Tools-Suites-12e885858f7e81829c08cb87cf40dde1?pvs=21"><span class="icon">🛠️</span>Tools &amp; Suites</a></td><td class="cell-FqpU">Confluence, Microsoft, Google, Axure, Notion</td></tr><tr id="12e88585-8f7e-8186-9300-cbb68f2c59c5"><td class="cell-title"><a href="https://www.notion.so/Product-Experience-12e885858f7e81869300cbb68f2c59c5?pvs=21"><img class="icon" src="figma-icon-2048x2048-lvgft610.png"/>Product Experience</a></td><td class="cell-FqpU">Platforms, CRM, Pricing</td></tr><tr id="12e88585-8f7e-8117-813b-f767c031e288"><td class="cell-title"><a href="https://www.notion.so/AI-ML-Techniques-12e885858f7e8117813bf767c031e288?pvs=21"><span class="icon">💫</span>AI/ML Techniques</a></td><td class="cell-FqpU">Neural Nets, Clusters, Recommendation Engines, LLMs</td></tr><tr id="12e88585-8f7e-8143-acdd-e87be6e2efc1"><td class="cell-title"><a href="https://www.notion.so/BI-Visualisations-12e885858f7e8143acdde87be6e2efc1?pvs=21"><img class="icon" src="https://www.notion.so/icons/chart-line_green.svg"/>BI &amp; Visualisations</a></td><td class="cell-FqpU">Holistics, Metabase, Sisense, Tableau</td></tr></tbody></table><br/><br/></div><div id="13388585-8f7e-807e-b278-e00f3685a546" class="collection-content"><h4 class="collection-title">My Awards &amp; Certifications</h4><table class="collection-content"><thead><tr><th><span class="icon property-icon"><svg role="graphics-symbol" viewBox="0 0 16 16" style="width:14px;height:14px;display:block;fill:rgba(55, 53, 47, 0.45);flex-shrink:0" class="typesTitle"><path d="M0.637695 13.1914C1.0957 13.1914 1.32812 13 1.47852 12.5215L2.24414 10.3887H6.14746L6.90625 12.5215C7.05664 13 7.2959 13.1914 7.74707 13.1914C8.22559 13.1914 8.5332 12.9043 8.5332 12.4531C8.5332 12.2891 8.50586 12.1523 8.44434 11.9678L5.41602 3.79199C5.2041 3.21777 4.82129 2.9375 4.19922 2.9375C3.60449 2.9375 3.21484 3.21777 3.0166 3.78516L-0.0322266 12.002C-0.09375 12.1797 -0.121094 12.3232 -0.121094 12.4668C-0.121094 12.918 0.166016 13.1914 0.637695 13.1914ZM2.63379 9.12402L4.17871 4.68066H4.21973L5.76465 9.12402H2.63379ZM12.2793 13.2324C13.3115 13.2324 14.2891 12.6787 14.7129 11.8037H14.7402V12.5762C14.7471 12.9863 15.0273 13.2393 15.4238 13.2393C15.834 13.2393 16.1143 12.9795 16.1143 12.5215V8.00977C16.1143 6.49902 14.9658 5.52148 13.1543 5.52148C11.7666 5.52148 10.6592 6.08887 10.2695 6.99121C10.1943 7.15527 10.1533 7.3125 10.1533 7.46289C10.1533 7.81152 10.4062 8.04395 10.7686 8.04395C11.0215 8.04395 11.2129 7.94824 11.3496 7.73633C11.7529 6.99121 12.2861 6.65625 13.1064 6.65625C14.0977 6.65625 14.6992 7.20996 14.6992 8.1123V8.67285L12.5664 8.7959C10.7686 8.8916 9.77734 9.69824 9.77734 11.0107C9.77734 12.3369 10.8096 13.2324 12.2793 13.2324ZM12.6621 12.1387C11.8008 12.1387 11.2129 11.667 11.2129 10.9561C11.2129 10.2725 11.7598 9.82129 12.7578 9.75977L14.6992 9.62988V10.3203C14.6992 11.3457 13.7969 12.1387 12.6621 12.1387Z"></path></svg></span>Category</th><th><span class="icon property-icon"><svg role="graphics-symbol" viewBox="0 0 16 16" style="width:14px;height:14px;display:block;fill:rgba(55, 53, 47, 0.45);flex-shrink:0" class="typesText"><path d="M1.56738 3.25879H14.4258C14.7676 3.25879 15.0479 2.97852 15.0479 2.63672C15.0479 2.29492 14.7744 2.02148 14.4258 2.02148H1.56738C1.21875 2.02148 0.952148 2.29492 0.952148 2.63672C0.952148 2.97852 1.22559 3.25879 1.56738 3.25879ZM1.56738 6.84082H14.4258C14.7676 6.84082 15.0479 6.56055 15.0479 6.21875C15.0479 5.87695 14.7744 5.60352 14.4258 5.60352H1.56738C1.21875 5.60352 0.952148 5.87695 0.952148 6.21875C0.952148 6.56055 1.22559 6.84082 1.56738 6.84082ZM1.56738 10.4229H14.4258C14.7676 10.4229 15.0479 10.1426 15.0479 9.80078C15.0479 9.45898 14.7744 9.18555 14.4258 9.18555H1.56738C1.21875 9.18555 0.952148 9.45898 0.952148 9.80078C0.952148 10.1426 1.22559 10.4229 1.56738 10.4229ZM1.56738 14.0049H8.75879C9.10059 14.0049 9.38086 13.7246 9.38086 13.3828C9.38086 13.041 9.10742 12.7676 8.75879 12.7676H1.56738C1.21875 12.7676 0.952148 13.041 0.952148 13.3828C0.952148 13.7246 1.22559 14.0049 1.56738 14.0049Z"></path></svg></span>Details</th><th><span class="icon property-icon"><svg role="graphics-symbol" viewBox="0 0 16 16" style="width:14px;height:14px;display:block;fill:rgba(55, 53, 47, 0.45);flex-shrink:0" class="typesText"><path d="M1.56738 3.25879H14.4258C14.7676 3.25879 15.0479 2.97852 15.0479 2.63672C15.0479 2.29492 14.7744 2.02148 14.4258 2.02148H1.56738C1.21875 2.02148 0.952148 2.29492 0.952148 2.63672C0.952148 2.97852 1.22559 3.25879 1.56738 3.25879ZM1.56738 6.84082H14.4258C14.7676 6.84082 15.0479 6.56055 15.0479 6.21875C15.0479 5.87695 14.7744 5.60352 14.4258 5.60352H1.56738C1.21875 5.60352 0.952148 5.87695 0.952148 6.21875C0.952148 6.56055 1.22559 6.84082 1.56738 6.84082ZM1.56738 10.4229H14.4258C14.7676 10.4229 15.0479 10.1426 15.0479 9.80078C15.0479 9.45898 14.7744 9.18555 14.4258 9.18555H1.56738C1.21875 9.18555 0.952148 9.45898 0.952148 9.80078C0.952148 10.1426 1.22559 10.4229 1.56738 10.4229ZM1.56738 14.0049H8.75879C9.10059 14.0049 9.38086 13.7246 9.38086 13.3828C9.38086 13.041 9.10742 12.7676 8.75879 12.7676H1.56738C1.21875 12.7676 0.952148 13.041 0.952148 13.3828C0.952148 13.7246 1.22559 14.0049 1.56738 14.0049Z"></path></svg></span>Awarded By</th><th><span class="icon property-icon"><svg role="graphics-symbol" viewBox="0 0 16 16" style="width:14px;height:14px;display:block;fill:rgba(55, 53, 47, 0.45);flex-shrink:0" class="typesUrl"><path d="M7.69922 10.8945L8.73828 9.84863C7.91797 9.77344 7.34375 9.51367 6.91992 9.08984C5.76465 7.93457 5.76465 6.29395 6.91309 5.14551L9.18262 2.87598C10.3379 1.7207 11.9717 1.7207 13.127 2.87598C14.2891 4.04492 14.2822 5.67188 13.1338 6.82031L11.958 7.99609C12.1768 8.49512 12.2451 9.10352 12.1289 9.62988L14.0908 7.6748C15.7725 6 15.7793 3.62109 14.084 1.92578C12.3887 0.223633 10.0098 0.237305 8.33496 1.91211L5.95605 4.29785C4.28125 5.97266 4.26758 8.35156 5.96289 10.0469C6.36621 10.4434 6.90625 10.7441 7.69922 10.8945ZM8.30078 5.13184L7.26855 6.17773C8.08203 6.25293 8.66309 6.51953 9.08008 6.93652C10.2422 8.09863 10.2422 9.73242 9.08691 10.8809L6.81738 13.1504C5.66211 14.3057 4.03516 14.3057 2.87305 13.1504C1.71094 11.9883 1.71777 10.3545 2.87305 9.20605L4.04199 8.03027C3.83008 7.53125 3.75488 6.92969 3.87109 6.39648L1.91602 8.35156C0.234375 10.0264 0.227539 12.4121 1.92285 14.1074C3.61816 15.8027 5.99707 15.7891 7.67188 14.1143L10.0439 11.7354C11.7256 10.0537 11.7324 7.6748 10.0371 5.98633C9.64062 5.58301 9.10059 5.28223 8.30078 5.13184Z"></path></svg></span>Link</th></tr></thead><tbody><tr id="13388585-8f7e-8031-be6d-e59c7b6e71b5"><td class="cell-title"><a href="https://www.notion.so/Machine-Learning-133885858f7e8031be6de59c7b6e71b5?pvs=21"><span class="icon">💫</span>Machine Learning</a></td><td class="cell-FqpU">Neural Networks and Deep Learning</td><td class="cell-yZTW">Coursera</td><td class="cell-f}OR"><a href="https://www.coursera.org/account/accomplishments/verify/LF2273KB5MXC" class="url-value">https://www.coursera.org/account/accomplishments/verify/LF2273KB5MXC</a></td></tr><tr id="13388585-8f7e-8015-8761-e46548e3c857"><td class="cell-title"><a href="https://www.notion.so/Software-Tooling-133885858f7e80158761e46548e3c857?pvs=21"><span class="icon">🛠️</span>Software Tooling</a></td><td class="cell-FqpU">Building R Packages</td><td class="cell-yZTW">Coursera</td><td class="cell-f}OR"><a href="https://coursera.org/share/b230ff027d8708cdd1409b01f2b91014" class="url-value">https://coursera.org/share/b230ff027d8708cdd1409b01f2b91014</a></td></tr><tr id="13388585-8f7e-805e-91d2-c3369665df38"><td class="cell-title"><a href="https://www.notion.so/Analytics-133885858f7e805e91d2c3369665df38?pvs=21"><span class="icon">🔢</span>Analytics</a></td><td class="cell-FqpU">Top 10% User Badge</td><td class="cell-yZTW">Stackoverflow</td><td class="cell-f}OR"></td></tr></tbody></table><br/><br/></div></div></div><p id="12e88585-8f7e-8156-b9d4-dccdc137e366" class="">
+</p></div></article><span class="sans" style="font-size:14px;padding-top:2em"></span></body></html>
